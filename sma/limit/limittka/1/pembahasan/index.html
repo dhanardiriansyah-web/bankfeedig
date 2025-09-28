@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal TKA - Desain Gabungan</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-color: #0A2B4C;
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #dee2e6;
+            --box-background: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Mengubah agar konten mulai dari atas */
+            min-height: 100vh;
+            color: var(--text-color);
+            box-sizing: border-box;
+        }
+
+        .feed-container {
+            width: 100%;
+            max-width: 500px;
+            /* Menghapus aspect-ratio dan max-height agar tinggi fleksibel */
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem; 
+            flex-shrink: 0;
+        }
+
+        .logo {
+            width: 180px; /* Ukuran logo disesuaikan */
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .metadata-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+            font-size: 0.85rem; /* Ukuran font dikecilkan */
+        }
+
+        .metadata-table td {
+            border: 1px solid var(--border-color);
+            padding: 0.5rem;
+        }
+
+        .metadata-table td:first-child {
+            font-weight: 600;
+            background-color: var(--box-background);
+            width: 130px;
+        }
+        
+        .box {
+            background-color: var(--box-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            box-sizing: border-box;
+            /* overflow-y: auto; dihapus agar box tidak punya scroll sendiri */
+            position: relative;
+            z-index: 1;
+        }
+        
+        .box-title {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--brand-color);
+        }
+
+        .soal-box {
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .soal-box::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%; 
+            height: 80%; 
+            background-image: url('https://imgix3.ruangguru.com/assets/miscellaneous/png_rqj0yn_8775.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.08;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        
+        .pembahasan-box {
+            flex-grow: 1;
+        }
+        
+        .content {
+            font-size: 0.90rem; /* Sedikit menyesuaikan ukuran font */
+            line-height: 1.7;
+        }
+        
+        .pembahasan-box .content ul {
+            padding-left: 20px;
+            margin: 0;
+            list-style: none; /* Menghapus bullet points default */
+        }
+        
+        .pembahasan-box .content li {
+            margin-bottom: 1rem; /* Menambah jarak antar langkah */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="feed-container">
+        <header>
+            <div class="logo">
+                 <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_rqj0yn_8775.png" alt="Logo" style="width:100%; height:auto;">
+            </div>
+        </header>
+
+        <table class="metadata-table">
+            <tbody>
+                <tr>
+                    <td>Topik</td>
+                    <td>Limit Fungsi</td>
+                </tr>
+                <tr>
+                    <td>Subtopik</td>
+                    <td>Definisi Turunan & Kecepatan Sesaat</td>
+                </tr>
+                <tr>
+                    <td>Level Kesulitan</td>
+                    <td>Penalaran</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="soal-box box">
+            <h2 class="box-title">Soal</h2>
+            <div class="content">
+                 Sebuah roket diluncurkan vertikal ke atas. Ketinggian roket (dalam meter) setelah $t$ detik diberikan oleh fungsi $h(t) = 40t - 5t^2$. Kecepatan sesaat roket pada $t=3$ detik dapat diaproksimasi dengan menghitung nilai dari limit berikut:
+                $$ \lim\limits_{a \to 3} \frac{h(a) - h(3)}{a-3} $$
+                Berapakah kecepatan sesaat roket pada $t=3$ detik?
+            </div>
+        </div>
+
+        <div class="pembahasan-box box">
+            <h2 class="box-title">Pembahasan</h2>
+            <div class="content">
+                <b>Teori Dasar:</b> Limit ini adalah definisi turunan yang merepresentasikan kecepatan sesaat. Karena substitusi langsung $a=3$ menghasilkan bentuk tak tentu $\frac{0}{0}$, kita perlu melakukan manipulasi aljabar.
+                <ul>
+                    <li><b>Langkah 1:</b> Hitung nilai $h(a)$ dan $h(3)$.<br>
+                    $h(a) = 40a - 5a^2$<br>
+                    $h(3) = 40(3) - 5(3^2) = 120 - 45 = 75$.</li>
+                    <li><b>Langkah 2:</b> Substitusikan ke dalam ekspresi limit.<br>
+                    $$ \lim\limits_{a \to 3} \frac{(40a - 5a^2) - 75}{a-3} $$</li>
+                    <li><b>Langkah 3:</b> Faktorkan pembilang untuk menghilangkan bentuk tak tentu.<br>
+                    $$ \lim\limits_{a \to 3} \frac{-5(a^2 - 8a + 15)}{a-3} = \lim\limits_{a \to 3} \frac{-5(a-3)(a-5)}{a-3} $$</li>
+                    <li><b>Langkah 4:</b> Coret faktor $(a-3)$ dan substitusikan $a=3$.<br>
+                    $$ \lim\limits_{a \to 3} -5(a-5) = -5(3-5) = -5(-2) = 10 $$</li>
+                </ul>
+                <b>Kesimpulan:</b> Kecepatan sesaat roket adalah 10 m/s.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
