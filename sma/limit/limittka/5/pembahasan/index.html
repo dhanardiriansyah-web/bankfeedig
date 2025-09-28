@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal TKA - Soal 5</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-color: #0A2B4C;
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #dee2e6;
+            --box-background: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            color: var(--text-color);
+            box-sizing: border-box;
+        }
+
+        .feed-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .box {
+            background-color: var(--box-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .box-title {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--brand-color);
+        }
+
+        .soal-box {
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .soal-box::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%; 
+            height: 80%; 
+            background-image: url('https://imgix3.ruangguru.com/assets/miscellaneous/png_rqj0yn_8775.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.08;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        
+        .pembahasan-box {
+            flex-grow: 1;
+        }
+        
+        .content {
+            font-size: 0.90rem;
+            line-height: 1.7;
+        }
+        
+        .pembahasan-box .content ul {
+            padding-left: 20px;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .pembahasan-box .content li {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feed-container">
+        <header>
+            <div class="logo">
+                <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_rqj0yn_8775.png" alt="Logo" style="width:100%; height:auto;">
+            </div>
+        </header>
+
+        <div class="soal-box box">
+            <h2 class="box-title">Soal 5</h2>
+            <div class="content">
+                Jika $f(x) = \sqrt{ax^2+bx+c} - \sqrt{px^2+qx+r}$ dan diketahui $\lim\limits_{x \to \infty} f(x)$ memiliki nilai riil yang bukan nol, maka hubungan yang pasti benar antara konstanta-konstanta tersebut adalah...
+            </div>
+        </div>
+
+        <div class="pembahasan-box box">
+            <h2 class="box-title">Pembahasan</h2>
+            <div class="content">
+                <b>Teori Dasar:</b> Nilai limit $\lim\limits_{x \to \infty} (\sqrt{ax^2+bx+c} - \sqrt{px^2+qx+r})$ bergantung pada koefisien $a$ dan $p$.
+                <ul>
+                    <li><b>Kasus 1:</b> Jika $a > p$, hasilnya $\infty$.</li>
+                    <li><b>Kasus 2:</b> Jika $a < p$, hasilnya $-\infty$.</li>
+                    <li><b>Kasus 3:</b> Jika $a = p$, hasilnya $\frac{b-q}{2\sqrt{a}}$.</li>
+                </ul>
+                <b>Analisis Soal:</b>
+                <ul>
+                    <li>Soal menyatakan bahwa limitnya memiliki "nilai riil". Ini mengeliminasi Kasus 1 dan 2, sehingga kita harus berada di Kasus 3. Syaratnya: $\boldsymbol{a=p}$.</li>
+                    <li>Soal juga menyatakan nilainya "bukan nol". Dalam Kasus 3, hasilnya adalah $\frac{b-q}{2\sqrt{a}}$. Agar nilai ini tidak nol, pembilangnya tidak boleh nol. Syaratnya: $b-q \neq 0$ atau $\boldsymbol{b \neq q}$.</li>
+                </ul>
+                <b>Kesimpulan:</b> Dua syarat yang harus dipenuhi adalah $a=p$ dan $b \neq q$.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
