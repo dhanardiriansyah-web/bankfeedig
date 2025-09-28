@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal TKA - Limit Soal 2</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-color: #0A2B4C;
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #dee2e6;
+            --box-background: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+
+        .feed-container {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1 / 1;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            width: 350px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .metadata-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .metadata-table td {
+            border: 1px solid var(--border-color);
+            padding: 0.6rem;
+        }
+
+        .metadata-table td:first-child {
+            font-weight: 600;
+            background-color: var(--box-background);
+            width: 130px;
+        }
+
+        .soal-box {
+            flex-grow: 1;
+            background-color: var(--box-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .soal-box::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%; 
+            height: 80%;
+            background-image: url('https://imgix3.ruangguru.com/assets/miscellaneous/png_rqj0yn_8775.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.08;
+            transform: translate(-50%, -50%);
+            z-index: 1; 
+        }
+
+        .soal-content {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            position: relative; 
+            z-index: 2;
+        }
+        
+        .pilihan-ganda {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        
+        .pilihan-ganda li {
+            margin-bottom: 0.5rem;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="feed-container">
+        <header>
+            <div class="logo">
+                <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_rqj0yn_8775.png" alt="Logo" style="width:100%; height:auto;">
+            </div>
+        </header>
+
+        <table class="metadata-table">
+            <tbody>
+                <tr>
+                    <td>Topik</td>
+                    <td>Limit Fungsi</td>
+                </tr>
+                <tr>
+                    <td>Subtopik</td>
+                    <td>Definisi Turunan (Laju Perubahan)</td>
+                </tr>
+                <tr>
+                    <td>Level Kesulitan</td>
+                    <td>Aplikasi</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="soal-box">
+             <div class="soal-content">
+                Intensitas cahaya $I$ yang melewati sebuah filter berbanding terbalik dengan kuadrat jarak $d$ dari sumber cahaya, mengikuti rumus $I(d) = \frac{k}{d^2}$, dengan $k$ adalah konstanta. Perubahan laju intensitas cahaya terhadap jarak saat jarak mendekati 2 meter dapat dihitung menggunakan limit:
+                $$ \lim\limits_{d \to 2} \frac{\frac{k}{d^2} - \frac{k}{4}}{d-2} $$
+                Nilai limit tersebut adalah...
+                <ol class="pilihan-ganda">
+                    <li>(A) $-k$</li>
+                    <li>(B) $-k/2$</li>
+                    <li>(C) $-k/4$</li>
+                    <li>(D) $-k/8$</li>
+                    <li>(E) $k/4$</li>
+                </ol>
+             </div>
+        </div>
+    </div>
+
+</body>
+</html>
