@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal TKA - Soal 4</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-color: #0A2B4C;
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #dee2e6;
+            --box-background: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            color: var(--text-color);
+            box-sizing: border-box;
+        }
+
+        .feed-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .box {
+            background-color: var(--box-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .box-title {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--brand-color);
+        }
+
+        .soal-box {
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .soal-box::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%; 
+            height: 80%; 
+            background-image: url('https://imgix3.ruangguru.com/assets/miscellaneous/png_rqj0yn_8775.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.08;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        
+        .pembahasan-box {
+            flex-grow: 1;
+        }
+        
+        .content {
+            font-size: 0.90rem;
+            line-height: 1.7;
+        }
+        
+        .pembahasan-box .content ul {
+            padding-left: 20px;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .pembahasan-box .content li {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feed-container">
+        <header>
+            <div class="logo">
+                <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_rqj0yn_8775.png" alt="Logo" style="width:100%; height:auto;">
+            </div>
+        </header>
+
+        <div class="soal-box box">
+            <h2 class="box-title">Soal 4</h2>
+            <div class="content">
+                Berapakah nilai dari limit berikut?
+                $$ \lim\limits_{x \to 2} \frac{ax^2+bx-6}{x-2} $$
+                Putuskan apakah pernyataan (1) dan (2) berikut cukup untuk menjawab pertanyaan tersebut.
+                <br>(1) $a+b = 1$
+                <br>(2) $2a+b = 4$
+            </div>
+        </div>
+
+        <div class="pembahasan-box box">
+            <h2 class="box-title">Pembahasan</h2>
+            <div class="content">
+                <b>Teori Dasar:</b> Agar limit $\lim\limits_{x \to c} \frac{P(x)}{Q(x)}$ memiliki nilai riil saat $Q(c)=0$, maka $P(c)$ juga harus sama dengan nol.
+                <ul>
+                    <li><b>Langkah 1:</b> Tentukan syarat agar limit ada.<br>
+                    Penyebut $(x-2)$ menjadi nol saat $x=2$. Maka, pembilang juga harus nol saat $x=2$.
+                    $a(2)^2 + b(2) - 6 = 0 \implies 4a + 2b = 6 \implies 2a+b=3$.
+                    Ini adalah syarat utama agar limit memiliki nilai riil.</li>
+                    <li><b>Langkah 2:</b> Analisis kecukupan data.
+                        <ul>
+                        <li><b>Pernyataan (1) $a+b=1$:</b> Dengan ini, kita memiliki sistem dua persamaan: $2a+b=3$ dan $a+b=1$. Sistem ini dapat diselesaikan untuk menemukan nilai unik $a=2$ dan $b=-1$. Karena $a$ dan $b$ dapat ditemukan, nilai limit pasti bisa dihitung. Jadi, pernyataan (1) SAJA cukup.</li>
+                        <li><b>Pernyataan (2) $2a+b=4$:</b> Pernyataan ini secara langsung bertentangan dengan syarat utama agar limit ada ($2a+b=3$). Karena syarat tidak terpenuhi, maka dapat dipastikan bahwa nilai limitnya tidak ada (divergen ke tak hingga). Pertanyaan "Berapakah nilainya?" terjawab, yaitu "tidak ada nilai riil". Jadi, pernyataan (2) SAJA cukup.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <b>Kesimpulan:</b> Karena pernyataan (1) saja cukup, dan pernyataan (2) saja juga cukup, maka jawaban yang tepat adalah "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup".
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
